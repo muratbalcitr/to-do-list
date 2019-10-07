@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Personality" translatable="false">Kişisel</string>
+    <string name="TodoList" translatable="false">Yapılacaklar</string>
+    <string name="action_settings" translatable="false">Ayarlar</string>
+    <string name="all_notes" translatable="false">Tüm Notlarım</string>
+    <string name="completed" translatable="false">Tamamlananlar</string>
+    <string name="create_a_new_user" translatable="false">Yeni Kullanıcı Oluştur</string>
+    <string name="favorites">Favoriler</string>
+    <string name="important">Önemli</string>
+    <string name="login">Giriş Yap</string>
+    <string name="password">Parola</string>
+    <string name="remember_me">Beni Hatırla</string>
+    <string name="username">Kullanıcı Adı</string>
+    <string name="Normal" translatable="false">Normal</string>
+    <string name="Target">Hedefler</string>
+    <string name="less_important">Az Önemli</string>
+</resources>

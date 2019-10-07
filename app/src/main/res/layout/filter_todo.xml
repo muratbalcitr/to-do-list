@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/filterLinear"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center|center_vertical"
+    android:minWidth="500dp"
+    android:minHeight="500dp"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_line_switch"
+        android:minHeight="64dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Type Select : "
+            android:textColor="#110000" />
+
+        <RadioButton
+            android:id="@+id/rbCompletedFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="Completed" />
+
+        <RadioButton
+            android:id="@+id/rbNotCompletedFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="not Completed" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_line_switch"
+        android:minHeight="64dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Order by  Name : "
+            android:textAlignment="inherit"
+            android:textAllCaps="true"
+            android:textColor="#070000"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:id="@+id/btnDescFilter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:layout_weight="1.5"
+            android:background="@drawable/button_done"
+            android:drawableLeft="@drawable/ic_sort_by_alpha_black_24dp"
+            android:gravity="center"
+            android:text="decreasing"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnIncFilter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:layout_weight="1.5"
+            android:background="@drawable/button_done"
+            android:drawableLeft="@drawable/ic_sort_by_alpha_black_24dp"
+            android:gravity="center"
+            android:text="increased"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_line_switch"
+        android:minHeight="64dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Date Select : "
+            android:textColor="#020000" />
+
+        <Button
+            android:id="@+id/btnDateSelectFilter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:background="@drawable/button_line_3"
+            android:drawableLeft="@drawable/ic_date_range_black_24dp"
+            android:gravity="center"
+            android:text="Date Select" />
+    </LinearLayout>
+
+</LinearLayout>

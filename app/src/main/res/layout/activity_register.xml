@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cnsMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="42dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/etName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_line_3"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="name and surname"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#FC0F000B"
+        android:textColorHighlight="#0A0000"
+        android:textColorHint="#0F0101"
+        android:textColorLink="#FC0F000B"
+        app:layout_constraintBottom_toTopOf="@+id/etMailSignup"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <EditText
+        android:id="@+id/etMailSignup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_line_3"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="e mail"
+        android:inputType="textEmailAddress"
+
+        android:minHeight="48dp"
+        android:textColor="#FC0F000B"
+        android:textColorHighlight="#FC0F000B"
+        android:textColorHint="#FC0F000B"
+        android:textColorLink="#FC0F000B"
+        app:layout_constraintBottom_toTopOf="@+id/etPasswordSignup"
+        app:layout_constraintEnd_toEndOf="@+id/etName"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/etName"
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+    <EditText
+        android:id="@+id/etPasswordSignup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_line_3"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="password"
+
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColor="#FC0F000B"
+        android:textColorHighlight="#FC0F000B"
+        android:textColorHint="#FC0F000B"
+        android:textColorLink="#FC0F000B"
+        app:layout_constraintBottom_toTopOf="@+id/etRePassword"
+        app:layout_constraintEnd_toEndOf="@+id/etMailSignup"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/etMailSignup"
+        app:layout_constraintTop_toBottomOf="@+id/etMailSignup" />
+
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_done"
+        android:minHeight="48dp"
+        android:text="Kayıt Ol"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/etRePassword"
+        app:layout_constraintStart_toStartOf="@+id/etRePassword"
+        app:layout_constraintTop_toBottomOf="@+id/etRePassword" />
+
+    <EditText
+        android:id="@+id/etRePassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_line_3"
+        android:ems="10"
+        android:gravity="center"
+
+        android:hint="re-password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColor="#FC0F000B"
+        android:textColorHighlight="#FC0F000B"
+        android:textColorHint="#FC0F000B"
+        android:textColorLink="#FC0F000B"
+        app:layout_constraintBottom_toTopOf="@+id/btnSignup"
+        app:layout_constraintEnd_toEndOf="@+id/etPasswordSignup"
+        app:layout_constraintStart_toStartOf="@+id/etPasswordSignup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
