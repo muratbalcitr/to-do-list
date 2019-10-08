@@ -6,23 +6,23 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.textfield.TextInputEditText;
 import com.murat.todolist.R;
 import com.murat.todolist.database.LoginDatabase;
 import com.murat.todolist.model.LoginUser;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    EditText etEmail;
-    EditText etUsername;
-    EditText etRe_password;
-    EditText etPassword;
+    TextInputEditText etEmail;
+    TextInputEditText etUsername;
+    TextInputEditText etRe_password;
+    TextInputEditText etPassword;
     Button btnRegister;
     ConstraintLayout cnsMain;
     LoginDatabase loginDatabase;
@@ -52,25 +52,25 @@ public class RegisterActivity extends AppCompatActivity {
             etUsername.setError("this field cannot be blank");
             etUsername.requestFocus();
         }
-        if (email.isEmpty()) {
+        else if (email.isEmpty()) {
             etUsername.setError("this field cannot be blank");
             etUsername.requestFocus();
         }
-        if (!re_pass.equals(pass)) {
+       else if (!re_pass.equals(pass)) {
             Snackbar snackbar = Snackbar.make(cnsMain, "Passwords do not match", Snackbar.LENGTH_LONG);
             snackbar.setAction("OK", v -> {
                 snackbar.dismiss();
             });
             snackbar.show();
         }
-        if (pass.length() < 6) {
+        else if (pass.length() < 6) {
             Snackbar snackbar = Snackbar.make(cnsMain, "Passwords must be at least 6 characters", Snackbar.LENGTH_LONG);
             snackbar.setAction("OK", v -> {
                 snackbar.dismiss();
             });
             snackbar.show();
         }
-        if (!username.matches("") && !email.matches("") && pass.matches(re_pass)) {
+        else if (!username.matches("") && !email.matches("") && pass.matches(re_pass)) {
             LoginUser login = new LoginUser(etEmail.getText().toString(), etPassword.getText().toString(), etUsername.getText().toString());
             insertRow(login);
         }
@@ -79,32 +79,15 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public void emailControl(String email) {
-        loadControlUser(email);
-    }
+        if (loginDatabase.loginDAO().queryUser(email)!=null){
+            Toast.makeText(RegisterActivity.this, "böle bir kullanıcı var", Toast.LENGTH_SHORT).show();
 
-    @SuppressLint("StaticFieldLeak")
-    private void loadControlUser(String email) {
-        new AsyncTask<String, Void, LoginUser>() {
-            @Override
-            protected LoginUser doInBackground(String... params) {
-
-                if (loginDatabase.loginDAO().queryUser(params[0]) != null) {
-                    Toast.makeText(RegisterActivity.this, "böle bir kullanıcı var", Toast.LENGTH_SHORT).show();
-
-                } else {
-                    register();
-                }
-
-                return null;
-            }
-
-            @Override
-            protected void onPostExecute(LoginUser todoList) {
-
-            }
-        }.execute(email);
+        }else{
+            register();
+        }
 
     }
+
 
     @SuppressLint("StaticFieldLeak")
     private void insertRow(LoginUser loginUser) {
